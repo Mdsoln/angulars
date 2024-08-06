@@ -1,11 +1,12 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MessageDetailsComponent } from '../message-details/message-details.component';
 
 @Component({
   selector: 'app-advertise-page',
   standalone: true,
-  imports: [FormsModule, NgIf, NgFor],
+  imports: [FormsModule, NgIf, NgFor, MessageDetailsComponent],
   templateUrl: './advertise-page.component.html',
   styleUrl: './advertise-page.component.scss'
 })

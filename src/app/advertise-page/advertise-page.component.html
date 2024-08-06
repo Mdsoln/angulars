@@ -41,5 +41,12 @@
         </tr>
        </tbody>
     </table>
+
+    <div class="flex-container" *ngIf="isSubmitted">
+      <app-message-details *ngFor="let tmsg of tableMessage; let i = index"
+                           [messager]="tmsg">
+      </app-message-details>
+    </div>
+    
   </div>
   
