@@ -32,4 +32,9 @@ export class AdvertisePageComponent {
       'message': this.message
     })
   }
+  
+  deleteMessage(index: number){
+    this.tableMessage.splice(index, 1);
+  }
+  
 }
