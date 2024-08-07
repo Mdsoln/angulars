@@ -2,6 +2,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MessageDetailsComponent } from '../message-details/message-details.component';
+import { DetailServiceService } from '../detail-service.service';
 
 @Component({
   selector: 'app-advertise-page',
@@ -18,10 +19,13 @@ export class AdvertisePageComponent {
   isSubmitted: boolean = false;
   tableMessage: Array<any> = [];
 
-  constructor() {
+  constructor(
+    private service: DetailServiceService
+  ) {
     this.name = '';
     this.email = '';
     this.message = '';
+    this.tableMessage = this.service.getAllMessages();
   }
 
   onSubmit(){
@@ -36,5 +40,7 @@ export class AdvertisePageComponent {
   deleteMessage(index: number){
     this.tableMessage.splice(index, 1);
   }
+  
+  // service injection
   
 }
