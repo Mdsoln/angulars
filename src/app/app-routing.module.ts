@@ -2,7 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // Define your routes here, e.g., { path: '', component: HomeComponent }
+  // {
+  //   path: 'home', component: AdvertisePageComponent
+  // },
+  // {
+  //   path: 'about', component: AboutComponent
+  // },
+  // { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
